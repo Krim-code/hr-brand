@@ -1,14 +1,33 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: #002d74;
+  --color-accent: #a3d300;
+  --color-secondary: #4a6896;
+
+  --color-bg: #ffffff;
+  --color-surface: #f7f9fc;
+  --color-surface-soft: #eef3f8;
+
+  --color-text: #002d74;
+  --color-text-secondary: #4a6896;
+
+  --color-border: rgba(0, 45, 116, 0.12);
+  --color-border-strong: rgba(0, 45, 116, 0.22);
+}
+
 html {
   scroll-behavior: smooth;
+  background: var(--color-bg);
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  background: #080808;
-  color: white;
+
+  background: var(--color-bg);
+  color: var(--color-text);
+
   font-family:
     Inter,
     -apple-system,
@@ -22,21 +41,32 @@ body {
 }
 
 ::selection {
-  background: #a3ff12;
-  color: #080808;
+  background: var(--color-accent);
+  color: var(--color-primary);
 }
+
+/* =========================
+   GRID BACKGROUND
+========================= */
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(
+      rgba(0, 45, 116, 0.055) 1px,
+      transparent 1px
+    ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.035) 1px,
+      rgba(0, 45, 116, 0.055) 1px,
       transparent 1px
     );
 
   background-size: 64px 64px;
 }
+
+/* =========================
+   CARD GLOW
+========================= */
 
 .card-glow {
   position: relative;
@@ -45,24 +75,100 @@ body {
 
 .card-glow::before {
   content: "";
+
   position: absolute;
   inset: -1px;
+
   pointer-events: none;
 
   background:
     radial-gradient(
       500px circle at 50% 0%,
-      rgba(163, 255, 18, 0.10),
+      rgba(163, 211, 0, 0.16),
       transparent 42%
     );
 
   opacity: 0;
+
   transition: opacity 0.35s ease;
 }
 
 .card-glow:hover::before {
   opacity: 1;
 }
+
+/* =========================
+   OPTIONAL BRAND HELPERS
+========================= */
+
+.bg-brand {
+  background: var(--color-primary);
+}
+
+.bg-accent {
+  background: var(--color-accent);
+}
+
+.bg-surface {
+  background: var(--color-surface);
+}
+
+.text-brand {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.border-brand {
+  border-color: var(--color-border);
+}
+
+/* =========================
+   LIGHT GLASS
+========================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(0, 45, 116, 0.1);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 8px 40px rgba(0, 45, 116, 0.06);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 45, 116, 0.25);
+  border: 3px solid #ffffff;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #002d74;
+}
+
+/* =========================
+   CUSTOM CURSOR
+========================= */
 
 @media (pointer: fine) {
   html,

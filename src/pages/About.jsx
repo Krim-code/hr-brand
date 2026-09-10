@@ -76,19 +76,20 @@ const principles = [
 export default function About() {
   return (
     <>
-      <section className="relative overflow-hidden px-6 pb-28 pt-40">
-        <div className="absolute left-[10%] top-[15%] h-80 w-80 rounded-full bg-lime-400/15 blur-[130px]" />
-        <div className="absolute right-[5%] top-[35%] h-96 w-96 rounded-full bg-purple-600/10 blur-[150px]" />
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-white px-6 pb-28 pt-40">
+        <div className="absolute left-[10%] top-[15%] h-80 w-80 rounded-full bg-[#A3D300]/15 blur-[130px]" />
+        <div className="absolute right-[5%] top-[35%] h-96 w-96 rounded-full bg-[#4A6896]/12 blur-[150px]" />
 
         <div className="relative mx-auto max-w-7xl">
-          <div className="mb-6 text-sm font-bold uppercase tracking-[0.25em] text-lime-400">
+          <div className="mb-6 text-sm font-bold uppercase tracking-[0.25em] text-[#A3D300]">
             About / HUMAN CORE
           </div>
 
-          <h1 className="max-w-6xl text-6xl font-black leading-[0.88] tracking-[-0.065em] md:text-8xl xl:text-[104px]">
+          <h1 className="max-w-6xl text-6xl font-black leading-[0.88] tracking-[-0.065em] text-[#002D74] md:text-8xl xl:text-[104px]">
             Строим компанию,
             <br />
-            <span className="text-white/20">
+            <span className="text-[#4A6896]/45">
               в которой хочется
             </span>
             <br />
@@ -96,20 +97,20 @@ export default function About() {
           </h1>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
-            <p className="max-w-3xl text-xl leading-relaxed text-white/50">
+            <p className="max-w-3xl text-xl leading-relaxed text-[#4A6896]">
               HUMAN/CORE — продуктовая технологическая компания. Мы создаём
               цифровые сервисы, развиваем собственные продукты и строим
               инженерную культуру вокруг автономии, ответственности и здравого
               смысла.
             </p>
 
-            <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-6">
-              <div className="mb-3 flex items-center gap-2 text-sm font-bold text-lime-400">
+            <div className="rounded-[28px] border border-[#002D74]/10 bg-[#F7F9FC] p-6">
+              <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#A3D300]">
                 <Sparkles size={16} />
                 Наша идея
               </div>
 
-              <p className="leading-relaxed text-white/55">
+              <p className="leading-relaxed text-[#4A6896]">
                 Компания должна усиливать человека, а не превращать его
                 рабочий день в квест по согласованию согласований.
               </p>
@@ -118,18 +119,19 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.02]">
+      {/* FACTS */}
+      <section className="border-y border-[#002D74]/10 bg-[#F7F9FC]">
         <div className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
           {facts.map(([number, label]) => (
             <div
               key={label}
-              className="border-white/10 p-8 md:border-r md:p-10"
+              className="border-[#002D74]/10 p-8 md:border-r md:p-10"
             >
-              <div className="text-4xl font-black tracking-[-0.05em] md:text-5xl">
+              <div className="text-4xl font-black tracking-[-0.05em] text-[#002D74] md:text-5xl">
                 {number}
               </div>
 
-              <div className="mt-2 text-sm text-white/35">
+              <div className="mt-2 text-sm text-[#4A6896]">
                 {label}
               </div>
             </div>
@@ -137,26 +139,27 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-32">
+      {/* WHO WE ARE */}
+      <section className="bg-white px-6 py-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-[.8fr_1.2fr]">
             <div>
               <div className="sticky top-32">
-                <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-lime-400">
+                <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#A3D300]">
                   Who we are
                 </div>
 
-                <h2 className="text-5xl font-black leading-[0.95] tracking-[-0.055em] md:text-6xl">
+                <h2 className="text-5xl font-black leading-[0.95] tracking-[-0.055em] text-[#002D74] md:text-6xl">
                   Не семья.
                   <br />
-                  <span className="text-white/20">
+                  <span className="text-[#4A6896]/45">
                     Команда профессионалов.
                   </span>
                 </h2>
               </div>
             </div>
 
-            <div className="space-y-8 text-lg leading-relaxed text-white/50">
+            <div className="space-y-8 text-lg leading-relaxed text-[#4A6896]">
               <p>
                 Мы не обещаем, что здесь всегда будет легко. Сложные задачи,
                 ответственность и быстрый темп иногда действительно требуют
@@ -178,12 +181,12 @@ export default function About() {
                 разваливается.
               </p>
 
-              <div className="rounded-[32px] border border-white/10 bg-white/[0.025] p-8">
-                <div className="text-sm font-bold uppercase tracking-[0.2em] text-white/30">
+              <div className="rounded-[32px] border border-[#002D74]/10 bg-[#F7F9FC] p-8">
+                <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#4A6896]">
                   Short version
                 </div>
 
-                <div className="mt-5 text-3xl font-black tracking-[-0.04em]">
+                <div className="mt-5 text-3xl font-black tracking-[-0.04em] text-[#002D74]">
                   Меньше политики.
                   <br />
                   Больше нормальной работы.
@@ -194,16 +197,19 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 pb-32">
+      {/* VALUES */}
+      <section className="bg-white px-6 pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16">
-            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-lime-400">
+            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#A3D300]">
               Our values
             </div>
 
-            <h2 className="max-w-5xl text-5xl font-black tracking-[-0.055em] md:text-7xl">
+            <h2 className="max-w-5xl text-5xl font-black tracking-[-0.055em] text-[#002D74] md:text-7xl">
               Не плакаты на стене.
-              <span className="text-white/20"> Рабочие принципы.</span>
+              <span className="text-[#4A6896]/45">
+                {' '}Рабочие принципы.
+              </span>
             </h2>
           </div>
 
@@ -211,17 +217,17 @@ export default function About() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="group rounded-[32px] border border-white/10 bg-white/[0.025] p-8 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.045]"
+                className="group rounded-[32px] border border-[#002D74]/10 bg-[#F7F9FC] p-8 transition duration-300 hover:-translate-y-1 hover:border-[#002D74]/20 hover:bg-white hover:shadow-[0_24px_60px_rgba(0,45,116,0.08)]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lime-400 text-black">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#A3D300] text-[#002D74]">
                   {value.icon}
                 </div>
 
-                <h3 className="mt-10 text-3xl font-bold tracking-[-0.04em]">
+                <h3 className="mt-10 text-3xl font-bold tracking-[-0.04em] text-[#002D74]">
                   {value.title}
                 </h3>
 
-                <p className="mt-4 max-w-xl leading-relaxed text-white/40">
+                <p className="mt-4 max-w-xl leading-relaxed text-[#4A6896]">
                   {value.text}
                 </p>
               </div>
@@ -230,9 +236,10 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-32">
+      {/* HOW WE WORK */}
+      <section className="bg-white px-6 py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[40px] bg-lime-400 p-8 text-black md:p-14">
+          <div className="overflow-hidden rounded-[40px] bg-[#A3D300] p-8 text-[#002D74] md:p-14">
             <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
               <div>
                 <div className="text-sm font-bold uppercase tracking-[0.22em]">
@@ -248,9 +255,9 @@ export default function About() {
                 {principles.map((item) => (
                   <div
                     key={item}
-                    className="flex gap-3 rounded-[22px] bg-black/5 p-5"
+                    className="flex gap-3 rounded-[22px] bg-white/30 p-5"
                   >
-                    <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-black text-lime-400">
+                    <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#002D74] text-[#A3D300]">
                       <Check size={14} strokeWidth={3} />
                     </div>
 
@@ -265,16 +272,19 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-32">
+      {/* CAPABILITIES */}
+      <section className="bg-[#F7F9FC] px-6 py-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16">
-            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-lime-400">
+            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#A3D300]">
               How we build
             </div>
 
-            <h2 className="max-w-5xl text-5xl font-black tracking-[-0.055em] md:text-7xl">
+            <h2 className="max-w-5xl text-5xl font-black tracking-[-0.055em] text-[#002D74] md:text-7xl">
               Продукт, инженерия
-              <span className="text-white/20"> и люди — одна система.</span>
+              <span className="text-[#4A6896]/45">
+                {' '}и люди — одна система.
+              </span>
             </h2>
           </div>
 
@@ -303,34 +313,37 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-32">
+      {/* TIMELINE */}
+      <section className="bg-white px-6 py-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16">
-            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-lime-400">
+            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#A3D300]">
               Our story
             </div>
 
-            <h2 className="text-5xl font-black tracking-[-0.055em] md:text-7xl">
+            <h2 className="text-5xl font-black tracking-[-0.055em] text-[#002D74] md:text-7xl">
               Несколько лет
-              <span className="text-white/20"> в четырёх точках.</span>
+              <span className="text-[#4A6896]/45">
+                {' '}в четырёх точках.
+              </span>
             </h2>
           </div>
 
-          <div className="border-t border-white/10">
+          <div className="border-t border-[#002D74]/10">
             {timeline.map((item) => (
               <div
                 key={item.year}
-                className="grid gap-5 border-b border-white/10 py-8 md:grid-cols-[150px_1fr_1.4fr] md:items-start"
+                className="grid gap-5 border-b border-[#002D74]/10 py-8 md:grid-cols-[150px_1fr_1.4fr] md:items-start"
               >
-                <div className="text-3xl font-black text-lime-400">
+                <div className="text-3xl font-black text-[#A3D300]">
                   {item.year}
                 </div>
 
-                <div className="text-2xl font-bold tracking-[-0.03em]">
+                <div className="text-2xl font-bold tracking-[-0.03em] text-[#002D74]">
                   {item.title}
                 </div>
 
-                <div className="leading-relaxed text-white/40">
+                <div className="leading-relaxed text-[#4A6896]">
                   {item.text}
                 </div>
               </div>
@@ -339,7 +352,8 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 pb-32">
+      {/* QUOTES */}
+      <section className="bg-white px-6 pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-4 lg:grid-cols-3">
             <Quote
@@ -363,24 +377,27 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 pb-32">
+      {/* CTA */}
+      <section className="bg-white px-6 pb-32">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03] p-8 md:p-14">
+          <div className="overflow-hidden rounded-[40px] bg-[#002D74] p-8 text-white md:p-14">
             <div className="flex flex-col justify-between gap-12 lg:flex-row lg:items-end">
               <div>
-                <div className="text-sm font-bold uppercase tracking-[0.22em] text-lime-400">
+                <div className="text-sm font-bold uppercase tracking-[0.22em] text-[#A3D300]">
                   Join us
                 </div>
 
                 <h2 className="mt-5 max-w-4xl text-5xl font-black leading-[0.95] tracking-[-0.055em] md:text-7xl">
                   Хорошая компания —
-                  <span className="text-white/20"> это люди, которые её строят.</span>
+                  <span className="text-white/35">
+                    {' '}это люди, которые её строят.
+                  </span>
                 </h2>
               </div>
 
               <a
                 href="/jobs"
-                className="inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-lime-400 px-7 py-4 font-bold text-black transition hover:scale-[1.02]"
+                className="inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-[#A3D300] px-7 py-4 font-bold text-[#002D74] transition hover:scale-[1.02] hover:bg-[#95C100]"
               >
                 Смотреть вакансии
                 <ArrowUpRight size={18} />
@@ -395,22 +412,22 @@ export default function About() {
 
 function Capability({ icon, number, title, text }) {
   return (
-    <div className="rounded-[30px] border border-white/10 bg-white/[0.025] p-8">
+    <div className="rounded-[30px] border border-[#002D74]/10 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-[#002D74]/20 hover:shadow-[0_20px_50px_rgba(0,45,116,0.07)]">
       <div className="flex items-center justify-between">
-        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 text-lime-400">
+        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#A3D300]/15 text-[#002D74]">
           {icon}
         </div>
 
-        <div className="text-sm font-black text-white/20">
+        <div className="text-sm font-black text-[#002D74]/20">
           {number}
         </div>
       </div>
 
-      <h3 className="mt-14 text-3xl font-black tracking-[-0.04em]">
+      <h3 className="mt-14 text-3xl font-black tracking-[-0.04em] text-[#002D74]">
         {title}
       </h3>
 
-      <p className="mt-4 leading-relaxed text-white/40">
+      <p className="mt-4 leading-relaxed text-[#4A6896]">
         {text}
       </p>
     </div>
@@ -419,17 +436,17 @@ function Capability({ icon, number, title, text }) {
 
 function Quote({ text, name, role }) {
   return (
-    <div className="flex min-h-[320px] flex-col justify-between rounded-[32px] border border-white/10 bg-white/[0.025] p-8">
-      <div className="text-2xl font-semibold leading-snug tracking-[-0.035em]">
+    <div className="flex min-h-[320px] flex-col justify-between rounded-[32px] border border-[#002D74]/10 bg-[#F7F9FC] p-8 transition duration-300 hover:border-[#002D74]/20 hover:bg-white">
+      <div className="text-2xl font-semibold leading-snug tracking-[-0.035em] text-[#002D74]">
         “{text}”
       </div>
 
       <div>
-        <div className="font-bold">
+        <div className="font-bold text-[#002D74]">
           {name}
         </div>
 
-        <div className="mt-1 text-sm text-white/30">
+        <div className="mt-1 text-sm text-[#4A6896]">
           {role}
         </div>
       </div>

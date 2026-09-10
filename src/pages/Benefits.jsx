@@ -107,36 +107,39 @@ const details = [
 export default function Benefits() {
   return (
     <>
-      <section className="relative overflow-hidden px-6 pb-28 pt-40">
-        <div className="absolute left-[10%] top-[10%] h-80 w-80 rounded-full bg-lime-400/15 blur-[140px]" />
-        <div className="absolute right-[8%] top-[35%] h-96 w-96 rounded-full bg-purple-500/10 blur-[160px]" />
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-white px-6 pb-28 pt-40">
+        <div className="absolute left-[10%] top-[10%] h-80 w-80 rounded-full bg-[#A3D300]/15 blur-[140px]" />
+        <div className="absolute right-[8%] top-[35%] h-96 w-96 rounded-full bg-[#4A6896]/12 blur-[160px]" />
 
         <div className="relative mx-auto max-w-7xl">
-          <div className="mb-6 text-sm font-bold uppercase tracking-[0.25em] text-lime-400">
+          <div className="mb-6 text-sm font-bold uppercase tracking-[0.25em] text-[#A3D300]">
             Benefits / What you get
           </div>
 
-          <h1 className="max-w-6xl text-6xl font-black leading-[0.88] tracking-[-0.065em] md:text-8xl xl:text-[104px]">
+          <h1 className="max-w-6xl text-6xl font-black leading-[0.88] tracking-[-0.065em] text-[#002D74] md:text-8xl xl:text-[104px]">
             Не только
             <br />
-            <span className="text-white/20">зарплата.</span>
+            <span className="text-[#4A6896]/45">
+              зарплата.
+            </span>
             <br />
             Хотя и она важна.
           </h1>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
-            <p className="max-w-3xl text-xl leading-relaxed text-white/50">
+            <p className="max-w-3xl text-xl leading-relaxed text-[#4A6896]">
               Мы стараемся собирать пакет условий так, чтобы он реально облегчал
               жизнь и работу, а не существовал только красивой строчкой в вакансии.
             </p>
 
-            <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-6">
-              <div className="flex items-center gap-2 text-sm font-bold text-lime-400">
+            <div className="rounded-[28px] border border-[#002D74]/10 bg-[#F7F9FC] p-6">
+              <div className="flex items-center gap-2 text-sm font-bold text-[#A3D300]">
                 <Sparkles size={16} />
                 Главное
               </div>
 
-              <p className="mt-3 leading-relaxed text-white/45">
+              <p className="mt-3 leading-relaxed text-[#4A6896]">
                 Бенефиты не заменяют нормальную зарплату, адекватный менеджмент
                 и интересную работу. Они должны дополнять их.
               </p>
@@ -145,7 +148,8 @@ export default function Benefits() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.02]">
+      {/* STATS */}
+      <section className="border-y border-[#002D74]/10 bg-[#F7F9FC]">
         <div className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
           <Stat number="28" label="дней отпуска" />
           <Stat number="100%" label="оплата больничных" />
@@ -154,16 +158,19 @@ export default function Benefits() {
         </div>
       </section>
 
-      <section className="px-6 py-32">
+      {/* CORE BENEFITS */}
+      <section className="bg-white px-6 py-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16">
-            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-lime-400">
+            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#A3D300]">
               Core benefits
             </div>
 
-            <h2 className="max-w-5xl text-5xl font-black tracking-[-0.055em] md:text-7xl">
+            <h2 className="max-w-5xl text-5xl font-black tracking-[-0.055em] text-[#002D74] md:text-7xl">
               То, что помогает
-              <span className="text-white/20"> работать нормально.</span>
+              <span className="text-[#4A6896]/45">
+                {' '}работать нормально.
+              </span>
             </h2>
           </div>
 
@@ -171,17 +178,17 @@ export default function Benefits() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="group rounded-[30px] border border-white/10 bg-white/[0.025] p-7 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.045]"
+                className="group rounded-[30px] border border-[#002D74]/10 bg-[#F7F9FC] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#002D74]/20 hover:bg-white hover:shadow-[0_24px_60px_rgba(0,45,116,0.08)]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lime-400 text-black">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#A3D300] text-[#002D74]">
                   {benefit.icon}
                 </div>
 
-                <h3 className="mt-10 text-2xl font-black tracking-[-0.04em]">
+                <h3 className="mt-10 text-2xl font-black tracking-[-0.04em] text-[#002D74]">
                   {benefit.title}
                 </h3>
 
-                <p className="mt-4 leading-relaxed text-white/40">
+                <p className="mt-4 leading-relaxed text-[#4A6896]">
                   {benefit.text}
                 </p>
               </div>
@@ -190,24 +197,25 @@ export default function Benefits() {
         </div>
       </section>
 
-      <section className="px-6 pb-32">
+      {/* DETAIL SECTIONS */}
+      <section className="bg-white px-6 pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-4">
             {details.map((section) => (
               <div
                 key={section.number}
-                className="grid gap-8 rounded-[34px] border border-white/10 bg-white/[0.025] p-8 md:p-10 lg:grid-cols-[.8fr_1.2fr]"
+                className="grid gap-8 rounded-[34px] border border-[#002D74]/10 bg-[#F7F9FC] p-8 transition duration-300 hover:border-[#002D74]/20 md:p-10 lg:grid-cols-[.8fr_1.2fr]"
               >
                 <div>
-                  <div className="text-sm font-black text-lime-400">
+                  <div className="text-sm font-black text-[#A3D300]">
                     {section.number}
                   </div>
 
-                  <h3 className="mt-5 text-4xl font-black tracking-[-0.05em]">
+                  <h3 className="mt-5 text-4xl font-black tracking-[-0.05em] text-[#002D74]">
                     {section.title}
                   </h3>
 
-                  <p className="mt-5 max-w-xl leading-relaxed text-white/40">
+                  <p className="mt-5 max-w-xl leading-relaxed text-[#4A6896]">
                     {section.text}
                   </p>
                 </div>
@@ -216,13 +224,13 @@ export default function Benefits() {
                   {section.items.map((item) => (
                     <div
                       key={item}
-                      className="flex items-center gap-3 rounded-[20px] border border-white/10 bg-black/20 p-5"
+                      className="flex items-center gap-3 rounded-[20px] border border-[#002D74]/10 bg-white p-5"
                     >
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-lime-400/10 text-lime-400">
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#A3D300]/15 text-[#002D74]">
                         <ShieldCheck size={15} />
                       </div>
 
-                      <span className="text-white/60">
+                      <span className="text-[#002D74]/75">
                         {item}
                       </span>
                     </div>
@@ -234,9 +242,10 @@ export default function Benefits() {
         </div>
       </section>
 
-      <section className="px-6 py-32">
+      {/* WORK STYLE */}
+      <section className="bg-white px-6 py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[40px] bg-lime-400 p-8 text-black md:p-14">
+          <div className="overflow-hidden rounded-[40px] bg-[#A3D300] p-8 text-[#002D74] md:p-14">
             <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
               <div>
                 <div className="text-sm font-bold uppercase tracking-[0.2em]">
@@ -278,20 +287,23 @@ export default function Benefits() {
         </div>
       </section>
 
-      <section className="px-6 py-32">
+      {/* FAQ */}
+      <section className="bg-[#F7F9FC] px-6 py-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16">
-            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-lime-400">
+            <div className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#A3D300]">
               FAQ
             </div>
 
-            <h2 className="text-5xl font-black tracking-[-0.055em] md:text-7xl">
+            <h2 className="text-5xl font-black tracking-[-0.055em] text-[#002D74] md:text-7xl">
               А теперь
-              <span className="text-white/20"> нормальные вопросы.</span>
+              <span className="text-[#4A6896]/45">
+                {' '}нормальные вопросы.
+              </span>
             </h2>
           </div>
 
-          <div className="divide-y divide-white/10 border-y border-white/10">
+          <div className="divide-y divide-[#002D74]/10 border-y border-[#002D74]/10">
             <Faq
               question="Бенефиты доступны всем сотрудникам?"
               answer="Базовый пакет доступен всем штатным сотрудникам. Отдельные опции могут зависеть от роли, региона и формата работы."
@@ -320,23 +332,26 @@ export default function Benefits() {
         </div>
       </section>
 
-      <section className="px-6 pb-32">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03] p-8 md:p-14">
+      {/* FINAL CTA */}
+      <section className="bg-white px-6 py-32">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[40px] bg-[#002D74] p-8 text-white md:p-14">
           <div className="flex flex-col justify-between gap-12 lg:flex-row lg:items-end">
             <div>
-              <div className="text-sm font-bold uppercase tracking-[0.2em] text-lime-400">
+              <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#A3D300]">
                 Ready?
               </div>
 
               <h2 className="mt-5 max-w-4xl text-5xl font-black leading-[0.95] tracking-[-0.055em] md:text-7xl">
                 Осталось найти
-                <span className="text-white/20"> подходящую роль.</span>
+                <span className="text-white/35">
+                  {' '}подходящую роль.
+                </span>
               </h2>
             </div>
 
             <a
               href="/jobs"
-              className="inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-lime-400 px-7 py-4 font-bold text-black transition hover:scale-[1.02]"
+              className="inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-[#A3D300] px-7 py-4 font-bold text-[#002D74] transition hover:scale-[1.02] hover:bg-[#95C100]"
             >
               Смотреть вакансии
               <ArrowUpRight size={18} />
@@ -350,12 +365,12 @@ export default function Benefits() {
 
 function Stat({ number, label }) {
   return (
-    <div className="border-white/10 p-8 md:border-r md:p-10">
-      <div className="text-4xl font-black tracking-[-0.05em] md:text-5xl">
+    <div className="border-[#002D74]/10 p-8 md:border-r md:p-10">
+      <div className="text-4xl font-black tracking-[-0.05em] text-[#002D74] md:text-5xl">
         {number}
       </div>
 
-      <div className="mt-2 text-sm text-white/35">
+      <div className="mt-2 text-sm text-[#4A6896]">
         {label}
       </div>
     </div>
@@ -364,16 +379,16 @@ function Stat({ number, label }) {
 
 function Highlight({ icon, title, text }) {
   return (
-    <div className="rounded-[24px] bg-black/5 p-6">
-      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-lime-400">
+    <div className="rounded-[24px] bg-white/30 p-6">
+      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#002D74] text-[#A3D300]">
         {icon}
       </div>
 
-      <h3 className="mt-6 text-xl font-black">
+      <h3 className="mt-6 text-xl font-black text-[#002D74]">
         {title}
       </h3>
 
-      <p className="mt-2 leading-relaxed text-black/60">
+      <p className="mt-2 leading-relaxed text-[#002D74]/65">
         {text}
       </p>
     </div>
@@ -383,14 +398,13 @@ function Highlight({ icon, title, text }) {
 function Faq({ question, answer }) {
   return (
     <div className="grid gap-4 py-7 md:grid-cols-[.8fr_1.2fr]">
-      <div className="text-lg font-bold">
+      <div className="text-lg font-bold text-[#002D74]">
         {question}
       </div>
 
-      <p className="max-w-2xl leading-relaxed text-white/40">
+      <p className="max-w-2xl leading-relaxed text-[#4A6896]">
         {answer}
       </p>
     </div>
   )
 }
-

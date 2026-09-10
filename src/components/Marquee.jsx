@@ -10,7 +10,7 @@ export default function Marquee({
 
   return (
     <div
-      className={`relative overflow-hidden border-y border-white/10 bg-white/[0.02] ${className}`}
+      className={`relative overflow-hidden border-y border-[#002D74]/10 bg-[#F7F9FC] ${className}`}
     >
       <motion.div
         className="flex w-max items-center whitespace-nowrap"
@@ -28,19 +28,20 @@ export default function Marquee({
             key={`${item}-${index}`}
             className="flex items-center gap-8 px-8 py-5"
           >
-            <span className="text-xl font-black uppercase tracking-[-0.03em] text-white/65 md:text-2xl">
+            <span className="text-xl font-black uppercase tracking-[-0.03em] text-[#002D74]/75 md:text-2xl">
               {item}
             </span>
 
-            <span className="text-2xl text-lime-400">
+            <span className="text-2xl text-[#A3D300]">
               ✦
             </span>
           </div>
         ))}
       </motion.div>
 
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#080808] to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#080808] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F7F9FC] to-transparent" />
+
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F7F9FC] to-transparent" />
     </div>
   )
 }

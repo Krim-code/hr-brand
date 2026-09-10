@@ -52,12 +52,12 @@ export default function CustomCursor() {
         animate={{
           width: hovered ? 54 : 14,
           height: hovered ? 54 : 14,
-          opacity: hovered ? 0.18 : 1,
+          opacity: hovered ? 0.16 : 1,
         }}
         transition={{
           duration: 0.18,
         }}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] hidden -translate-x-1/2 -translate-y-1/2 rounded-full bg-lime-400 mix-blend-difference md:block"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] hidden -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#A3D300] shadow-[0_0_20px_rgba(163,211,0,0.25)] md:block"
       />
 
       <motion.div
@@ -65,9 +65,8 @@ export default function CustomCursor() {
           x: mouseX,
           y: mouseY,
         }}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white md:block"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#002D74] md:block"
       />
     </>
   )
 }
-
