@@ -91,7 +91,7 @@ export default function Footer() {
 
                 <div className="mt-6 space-y-6">
                   <a
-                    href="mailto:hello@example.com"
+                    href="mailto:hello@human-core.ru"
                     className="group flex items-start gap-3"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-lime-400">
@@ -104,7 +104,7 @@ export default function Footer() {
                       </div>
 
                       <div className="mt-1 font-medium text-white/60 transition group-hover:text-white">
-                        hello@example.com
+                        hello@human-core.ru
                       </div>
                     </div>
                   </a>

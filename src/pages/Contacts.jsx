@@ -38,8 +38,8 @@ export default function Contacts() {
             label="Careers"
             title="Хочешь к нам?"
             text="Вопросы по вакансиям, процессу найма и откликам."
-            action="jobs@example.com"
-            href="mailto:jobs@example.com"
+            action="jobs@human-core.ru"
+            href="mailto:jobs@human-core.ru"
           />
 
           <ContactCard
@@ -47,8 +47,8 @@ export default function Contacts() {
             label="Business"
             title="По партнёрству"
             text="Интеграции, совместные проекты и коммерческие предложения."
-            action="hello@example.com"
-            href="mailto:hello@example.com"
+            action="hello@human-core.ru"
+            href="mailto:hello@human-core.ru"
           />
 
           <ContactCard
@@ -56,8 +56,8 @@ export default function Contacts() {
             label="Press & media"
             title="Медиа и PR"
             text="Комментарии, интервью и всё, что связано с публичными коммуникациями."
-            action="press@example.com"
-            href="mailto:press@example.com"
+            action="press@human-core.ru"
+            href="mailto:press@human-core.ru"
           />
         </div>
 
@@ -93,7 +93,7 @@ export default function Contacts() {
                     <input
                       required
                       type="email"
-                      placeholder="you@example.com"
+                      placeholder="you@human-core.ru"
                       className={inputClass}
                     />
                   </Field>
@@ -221,14 +221,14 @@ export default function Contacts() {
                     </div>
 
                     <div className="mt-1 text-sm text-black/60">
-                      hello@example.com
+                      hello@human-core.ru
                     </div>
                   </div>
                 </div>
               </div>
 
               <a
-                href="mailto:hello@example.com"
+                href="mailto:hello@human-core.ru"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 font-bold text-white"
               >
                 Написать нам
@@ -390,4 +390,3 @@ function Faq({
 
 const inputClass =
   'w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3.5 text-white outline-none transition placeholder:text-white/20 focus:border-lime-400'
-  

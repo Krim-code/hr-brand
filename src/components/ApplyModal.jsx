@@ -101,7 +101,7 @@ export default function ApplyModal({ open, onClose, job }) {
                         <input
                           type="email"
                           required
-                          placeholder="you@example.com"
+                          placeholder="you@human-core.ru"
                           className={inputClass}
                         />
                       </Field>
