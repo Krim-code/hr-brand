@@ -1,0 +1,9 @@
+services:
+  hr-brand:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hr-brand
+    restart: unless-stopped
+    ports:
+      - "8080:80"
